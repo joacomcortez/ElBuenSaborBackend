@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.Backend.entities.UsuarioTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2023-10-18T20:41:14" hostname="DESKTOP-VM393MV" time="0.003">
+  <properties/>
+  <testcase name="getRol()" classname="com.Backend.entities.UsuarioTest" time="0.001"/>
+  <testcase name="setPassword()" classname="com.Backend.entities.UsuarioTest" time="0.0"/>
+  <testcase name="getPassword()" classname="com.Backend.entities.UsuarioTest" time="0.001"/>
+  <testcase name="setRol()" classname="com.Backend.entities.UsuarioTest" time="0.0"/>
+  <testcase name="builder()" classname="com.Backend.entities.UsuarioTest" time="0.0"/>
+  <testcase name="setUsername()" classname="com.Backend.entities.UsuarioTest" time="0.0"/>
+  <testcase name="getUsername()" classname="com.Backend.entities.UsuarioTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - BackendApplicationTests</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>BackendApplicationTests</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.Backend.html">com.Backend</a> &gt; BackendApplicationTests</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">3.858s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">contextLoads()</td>
+<td class="success">3.858s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>17:41:02.562 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.Backend.BackendApplicationTests]: BackendApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:41:02.772 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.Backend.BackendApplication for test class com.Backend.BackendApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.4)
+
+2023-10-18T17:41:03.292-03:00  INFO 2372 --- [    Test worker] com.Backend.BackendApplicationTests      : Starting BackendApplicationTests using Java 17.0.8 with PID 2372 (started by joaco in C:\Users\joaco\OneDrive\Escritorio\Desarrollo\desarrolloProyecto\Backend)
+2023-10-18T17:41:03.303-03:00  INFO 2372 --- [    Test worker] com.Backend.BackendApplicationTests      : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2023-10-18T17:41:03.939-03:00  INFO 2372 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-18T17:41:04.043-03:00  INFO 2372 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 95 ms. Found 12 JPA repository interfaces.
+2023-10-18T17:41:04.592-03:00  INFO 2372 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-18T17:41:04.682-03:00  INFO 2372 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-18T17:41:04.689-03:00  INFO 2372 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-18T17:41:04.822-03:00  INFO 2372 --- [    Test worker] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2023-10-18T17:41:04.843-03:00  INFO 2372 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-18T17:41:04.973-03:00  INFO 2372 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-18T17:41:04.989-03:00  INFO 2372 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-18T17:41:06.219-03:00  INFO 2372 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@280d5a82
+2023-10-18T17:41:06.222-03:00  INFO 2372 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-18T17:41:06.273-03:00  WARN 2372 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-10-18T17:41:06.709-03:00  INFO 2372 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-18T17:41:07.432-03:00  INFO 2372 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-18T17:41:07.580-03:00  INFO 2372 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-18T17:41:07.930-03:00  INFO 2372 --- [    Test worker] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-10-18T17:41:09.915-03:00  INFO 2372 --- [    Test worker] com.Backend.BackendApplicationTests      : Started BackendApplicationTests in 6.849 seconds (process running for 9.016)
+Hibernate: insert into usuario (activo,fecha_alta,fecha_baja,fecha_modificacion,password,rol,username) values (?,?,?,?,?,?,?)
+Hibernate: insert into cliente (apellido,email,fecha_alta,fecha_baja,fecha_modificacion,nombre,telefono,id_usuario) values (?,?,?,?,?,?,?,?)
+Hibernate: insert into domicilio (calle,id_cliente,codigo_postal,fecha_alta,fecha_baja,fecha_modificacion,localidad,numero,numero_vivienda,piso_vivienda) values (?,?,?,?,?,?,?,?,?,?)
+Hibernate: insert into pedido (id_cliente,id_domicilio_entrega,estado,fecha_alta,fecha_baja,fecha_modificacion,fecha_pedido,forma_pago,hora_estimada_finalizacion,tipo_envio,total,total_costo) values (?,?,?,?,?,?,?,?,?,?,?,?)
+Hibernate: insert into factura (fecha_alta,fecha_baja,fecha_facturacion,fecha_modificacion,forma_pago,mp_merchant_order_id,mp_payment_id,mp_payment_type,mp_preference_id,id_pedido,total_venta) values (?,?,?,?,?,?,?,?,?,?,?)
+Hibernate: insert into rubro_articulo (denominacion,fecha_alta,fecha_baja,fecha_modificacion,id_rubro_padre) values (?,?,?,?,?)
+Hibernate: insert into rubro_articulo (denominacion,fecha_alta,fecha_baja,fecha_modificacion,id_rubro_padre) values (?,?,?,?,?)
+Hibernate: insert into rubro_articulo (denominacion,fecha_alta,fecha_baja,fecha_modificacion,id_rubro_padre) values (?,?,?,?,?)
+Hibernate: insert into rubro_articulo (denominacion,fecha_alta,fecha_baja,fecha_modificacion,id_rubro_padre) values (?,?,?,?,?)
+Hibernate: insert into unidad_medida (abreviatura,denominacion,fecha_alta,fecha_baja,fecha_modificacion) values (?,?,?,?,?)
+Hibernate: insert into articulo_insumo (denominacion,fecha_alta,fecha_baja,fecha_modificacion,precio_compra,id_rubro_articulo,stock_actual,stock_minimo,id_unidad_medida,url_imagen) values (?,?,?,?,?,?,?,?,?,?)
+Hibernate: insert into articulo_manufacturado (costo,denominacion,descripcion,fecha_alta,fecha_baja,fecha_modificacion,precio_venta,tiempo_estimado_cocina,url_imagen) values (?,?,?,?,?,?,?,?,?)
+Hibernate: insert into detalle_factura (id_articulo_insumo,id_articulo_manufacturado,cantidad,id_factura,fecha_alta,fecha_baja,fecha_modificacion,subtotal) values (?,?,?,?,?,?,?,?)
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.3</a> at Oct 18, 2023, 5:41:14 PM</p>
+</div>
+</div>
+</body>
+</html>
