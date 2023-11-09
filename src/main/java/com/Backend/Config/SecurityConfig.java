@@ -1,4 +1,4 @@
-package com.Backend.Config;
+package com.irojas.demojwt.Config;
 
 import com.Backend.Jwt.JwtAuthenticationFilter;
 import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
@@ -8,6 +8,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.annotation.web.configurers.HeadersConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
@@ -28,15 +29,13 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception
     {
         return http
-                .csrf(csrf ->
-                        csrf
-                                .disable())
+                .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(authRequest ->
                                 authRequest
                                         .requestMatchers("/auth/**").permitAll()
                                         .requestMatchers(PathRequest.toH2Console()).permitAll()
-                                        .requestMatchers("/api/v1/demoAdmin/**").hasAuthority("ADMIN")
-                                        .requestMatchers("/api/v1/demoUser/**").hasAuthority("USER")
+                                        .requestMatchers("/api/v1/demoAdmin/**").hasAuthority("ADMINISTRADOR")
+                                        .requestMatchers("/api/v1/demoUser/**").hasAuthority("USUSARIO")
 
                         //.anyRequest().authenticated()
                 )
