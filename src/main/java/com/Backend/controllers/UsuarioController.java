@@ -5,7 +5,6 @@ import com.Backend.entities.Usuario;
 import com.Backend.enums.Rol;
 import com.Backend.services.UsuarioServiceImpl;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.repository.query.Param;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

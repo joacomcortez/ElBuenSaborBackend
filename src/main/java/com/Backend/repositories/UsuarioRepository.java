@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import java.time.LocalDateTime;
 import java.util.Date;
+import java.util.Optional;
 
 @Repository
 public interface UsuarioRepository extends BaseRepository<Usuario, Long>{
@@ -26,7 +27,7 @@ public interface UsuarioRepository extends BaseRepository<Usuario, Long>{
             value = "SELECT * FROM usuario WHERE EXISTS (SELECT * FROM usuario u WHERE  u.username = ':username' AND u.password = ':password' AND u.activo = ':activo')",
             nativeQuery = true
     )
-    Boolean loginUsuario(@Param("username") String username, @Param("password") String password);
+    Usuario loginUsuario(@Param("username") String username, @Param("password") String password);
 
 
     //ALTAS DE USUARIO POR PARTE DEL USUARIO Y DEL ADMIN CON FORMULARIO Y CON GOOGLE
@@ -70,7 +71,7 @@ public interface UsuarioRepository extends BaseRepository<Usuario, Long>{
     )
     Usuario adminModifUsuario(@Param("activo") Boolean activo, @Param("fecha_alta") Date fecha_alta, @Param("fecha_baja") Date fecha_baja, @Param("fecha_mod") Date fecha_mod, @Param("password") String password, @Param("rol") Rol rol, @Param("username") String username);
 
-
+    Optional<Usuario> findByUsername(String username);
 
 
 

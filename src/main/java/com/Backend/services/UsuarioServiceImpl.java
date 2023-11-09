@@ -51,9 +51,9 @@ public class UsuarioServiceImpl extends BaseServiceImpl<Usuario, Long> implement
             throw new Exception(e.getMessage());
         }
     }
-    public Boolean log_in (String Email, String Clave) throws Exception {
+    public Usuario log_in (String Email, String Clave) throws Exception {
         try{
-            Boolean consulta = usuarioRepository.loginUsuario(Email, Clave);
+            Usuario consulta = usuarioRepository.loginUsuario(Email, Clave);
             return consulta;
         } catch (Exception e) {
             throw new Exception(e.getMessage());
