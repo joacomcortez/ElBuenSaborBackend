@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import lombok.RequiredArgsConstructor;
 
+import java.sql.SQLOutput;
+
 @RestController
 @RequestMapping("/auth")
 @RequiredArgsConstructor
@@ -23,6 +25,7 @@ public class AuthController {
     @PostMapping(value = "register")
     public ResponseEntity<AuthResponse> register(@RequestBody RegisterRequest request)
     {
+
         return ResponseEntity.ok(authService.register(request));
     }
 }

@@ -115,4 +115,13 @@ public class UsuarioServiceImpl extends BaseServiceImpl<Usuario, Long> implement
         }
     }
 
+    public Usuario loadByUsername(String username) throws Exception{
+        try{
+            Usuario user = usuarioRepository.loadByUsername(username);
+            return user;
+        } catch (Exception e) {
+            throw new Exception(e.getMessage());
+        }
+    }
+
 }

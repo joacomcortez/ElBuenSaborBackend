@@ -12,6 +12,13 @@ import java.util.Optional;
 
 @Repository
 public interface UsuarioRepository extends BaseRepository<Usuario, Long>{
+    @Query(
+            value = "SELECT u FROM Usuario u WHERE u.username = ':filtro'",
+            nativeQuery = true
+    )
+     Usuario loadByUsername(@Param("filtro") String username);
+
+
     @Query(value = "SELECT u FROM Usuario u WHERE u.username = ':filtro'")
     Usuario search(@Param("filtro") String filtro);
 
