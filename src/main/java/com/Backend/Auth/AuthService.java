@@ -1,17 +1,16 @@
 package com.Backend.Auth;
 
+
 import com.Backend.Jwt.JwtService;
 import com.Backend.entities.Usuario;
 import com.Backend.enums.Rol;
 import com.Backend.repositories.UsuarioRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
-
-import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
@@ -23,10 +22,10 @@ public class AuthService {
     private final AuthenticationManager authenticationManager;
 
     public AuthResponse login(LoginRequest request) {
-        authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(request.getUsername(), request.getPassword()));
+        authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(request.getUsername(), request.getPassword())); //springsecurity
         UserDetails user=userRepository.findByUsername(request.getUsername()).orElseThrow();
         String token=jwtService.getToken(user);
-        return AuthResponse.builder()
+        return AuthResponse.builder() //DTO
                 .token(token)
                 .build();
 
@@ -48,3 +47,4 @@ public class AuthService {
     }
 
 }
+

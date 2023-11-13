@@ -44,8 +44,8 @@ public class Usuario extends BaseFecha implements UserDetails {
     @Enumerated(EnumType.STRING)
     private Rol rol;
 
-    @NotNull
-    @Column(name = "activo", nullable = false)
+
+    @Column(name = "activo")
     private Boolean activo;
 
     @OneToOne(mappedBy = "usuario", optional = false)
