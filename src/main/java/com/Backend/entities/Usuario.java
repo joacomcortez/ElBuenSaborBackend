@@ -25,10 +25,6 @@ import java.util.List;
 @Table(name = "usuario", uniqueConstraints = {@UniqueConstraint(columnNames = {"username"})})
 public class Usuario extends BaseFecha implements UserDetails {
 
-//    NO IMPLEMENTAR, uso id de Base
-//    @NotNull
-//    @Column(name = "auth0_id", nullable = false, unique = true)
-//    private String auth0Id;
 
     @NotNull
     @Column(name = "username", nullable = false)

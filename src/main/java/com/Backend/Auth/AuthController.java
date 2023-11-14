@@ -2,14 +2,12 @@ package com.Backend.Auth;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/auth")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "*")
 public class AuthController {
 
     private final AuthService authService;
@@ -24,6 +22,11 @@ public class AuthController {
     public ResponseEntity<AuthResponse> register(@RequestBody RegisterRequest request)
     {
         return ResponseEntity.ok(authService.register(request));
+    }
+    @PostMapping(value = "registerEmpleado")
+    public ResponseEntity<AuthResponse> registerEmpleado(@RequestBody RegisterRequest request)
+    {
+        return ResponseEntity.ok(authService.registerEmpleado(request));
     }
 }
 

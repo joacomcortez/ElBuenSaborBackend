@@ -28,7 +28,7 @@ public class RubroArticulo extends BaseFecha {
     @NotNull
     private String denominacion;
 
-   private EstadoBasico estadoRubro;
+    private EstadoBasico estadoRubro;
     public void addArticuloInsumos(ArticuloInsumo articuloInsumo) {
         articuloInsumos.add(articuloInsumo);
     }

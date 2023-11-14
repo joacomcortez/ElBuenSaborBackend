@@ -12,7 +12,7 @@ import java.util.List;
 @Repository
 public interface TipoArticuloRepository extends BaseRepository<TipoArticulo, Long> {
 
-    @Query(value = "SELECT t FROM TipoArticulo t WHERE t.nombreCategoria LIKE %:filtro%")
+    @Query(value = "SELECT t FROM TipoArticulo t WHERE t.denominacion LIKE %:filtro%")
     TipoArticulo searchTipo(@Param("filtro") String filtro);
 
 }

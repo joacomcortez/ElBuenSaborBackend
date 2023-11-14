@@ -25,10 +25,12 @@ dependencies {
 ///	compile group: 'io.jsonwebtoken', name: 'jjwt', version: '0.11.5'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation("io.jsonwebtoken:jjwt-api:0.11.5")
-	implementation("io.jsonwebtoken:jjwt-impl:0.11.5")
-	implementation("io.jsonwebtoken:jjwt-jackson:0.11.5")
+	runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.5'
+	runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.11.5'
 	implementation 'org.springframework.boot:spring-boot-starter-data-rest:2.6.5'
-	implementation 'org.springframework.boot:spring-boot-starter-security:2.6.5' // Update to the latest version
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	testImplementation 'org.springframework.security:spring-security-test'
+	implementation group: 'org.springframework.security', name: 'spring-security-jwt', version: '1.1.1.RELEASE'
 
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.hibernate.orm:hibernate-envers:6.1.7.Final'

@@ -46,5 +46,19 @@ public class AuthService {
 
     }
 
+    public AuthResponse registerEmpleado(RegisterRequest request) {
+            Usuario user = Usuario.builder()
+                    .username(request.getUsername())
+                    .password(passwordEncoder.encode( request.getPassword()))
+                    .rol(Rol.EMPLEADO)
+                    .build();
+
+            userRepository.save(user);
+
+            return AuthResponse.builder()
+                    .token(jwtService.getToken(user))
+                    .build();
+
+    }
 }
 

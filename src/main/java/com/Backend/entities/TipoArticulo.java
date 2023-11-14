@@ -1,5 +1,6 @@
 package com.Backend.entities;
 
+import com.Backend.enums.EstadoBasico;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.*;
@@ -12,5 +13,6 @@ import lombok.*;
 @Builder
 @Setter
 public class TipoArticulo extends Base{
-    private String nombreCategoria;
+    private String denominacion;
+    private EstadoBasico estadoRubro;
 }

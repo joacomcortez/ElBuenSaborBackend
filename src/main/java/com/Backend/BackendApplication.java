@@ -2,6 +2,8 @@ package com.Backend;
 
 
 import com.Backend.entities.*;
+import com.Backend.enums.EstadoBasico;
+import com.Backend.enums.Rol;
 import com.Backend.repositories.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -75,7 +77,8 @@ public class BackendApplication {
 			artMan.setUrlImagen("urlURLurlURLurlURL");
 
 			TipoArticulo tipoArticulo = new TipoArticulo();
-			tipoArticulo.setNombreCategoria("sandwiches");
+			tipoArticulo.setDenominacion("sandwiches");
+			tipoArticulo.setEstadoRubro(EstadoBasico.Baja);
 			tipoArticuloRepository.save(tipoArticulo);
 			artMan.setTipoArticulo(tipoArticulo);
 
@@ -104,6 +107,7 @@ public class BackendApplication {
 			user.setFechaAlta(new Date(1-10-2023));
 			user.setFechaBaja(null);
 			user.setFechaModificacion(null);
+			user.setRol(Rol.CLIENTE);
 			user.setUsername("holaGonzalez");
 			user.setPassword("password");
 			user.setActivo(true);

@@ -62,6 +62,7 @@ public abstract class BaseServiceImpl<E extends Base, ID extends Serializable> i
     @Transactional
     public E update(ID id, E entity) throws Exception {
         try {
+
             return baseRepository.save(entity);
         } catch (Exception e) {
             throw new Exception(e.getMessage());
