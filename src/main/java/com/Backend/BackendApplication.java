@@ -171,6 +171,7 @@ public class BackendApplication {
 
 			RubroArticulo ra = new RubroArticulo();
 			ra.setDenominacion("carne");
+			ra.setEstadoRubro(EstadoBasico.Alta);
 			ra.setFechaAlta(new Date(1-10-2023));
 			ra.setFechaBaja(null);
 			ra.setFechaModificacion(null);
