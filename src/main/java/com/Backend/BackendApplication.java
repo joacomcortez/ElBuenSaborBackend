@@ -74,7 +74,8 @@ public class BackendApplication {
 			artMan.setFechaModificacion(null);
 			artMan.setPrecioVenta(BigDecimal.valueOf(2500));
 			artMan.setTiempoEstimadoCocina(20);
-			artMan.setUrlImagen("urlURLurlURLurlURL");
+			artMan.setEstado(EstadoBasico.Baja);
+			artMan.setUrlImagen("https://recetasdeusa.com/wp-content/uploads/2022/05/Hamburguesa-americana-1-scaled.jpg");
 
 			TipoArticulo tipoArticulo = new TipoArticulo();
 			tipoArticulo.setDenominacion("sandwiches");
@@ -91,8 +92,61 @@ public class BackendApplication {
 			artMan2.setFechaModificacion(null);
 			artMan2.setPrecioVenta(BigDecimal.valueOf(2500));
 			artMan2.setTiempoEstimadoCocina(20);
-			artMan2.setUrlImagen("urlURLurlURLurlURL");
+			artMan2.setEstado(EstadoBasico.Alta);
+			artMan2.setUrlImagen("https://osojimix.com/wp-content/uploads/2022/06/Para-la-masa-de-pizza-napolitana-8-hrs-fermentacion-Web-1.jpg");
 			articuloManufacturadoRepository.save(artMan2);
+
+			ArticuloManufacturado artMan3 = new ArticuloManufacturado();
+			artMan3.setCosto(BigDecimal.valueOf(450));
+			artMan3.setDenominacion("Papas fritas");
+			artMan3.setDescripcion("papas fritas con cheddar y verdeo");
+			artMan3.setFechaAlta(new Date(1-10-2023));
+			artMan3.setFechaBaja(null);
+			artMan3.setFechaModificacion(null);
+			artMan3.setPrecioVenta(BigDecimal.valueOf(2300));
+			artMan3.setTiempoEstimadoCocina(20);
+			artMan3.setEstado(EstadoBasico.Alta);
+			artMan3.setUrlImagen("https://as2.ftcdn.net/v2/jpg/02/95/15/49/1000_F_295154986_Gg3nJFkV7vxmUzlRKgk2TNiIOmyMBmyH.jpg");
+			articuloManufacturadoRepository.save(artMan3);
+
+			ArticuloManufacturado artMan4 = new ArticuloManufacturado();
+			artMan4.setCosto(BigDecimal.valueOf(2000));
+			artMan4.setDenominacion("sushi 7 piezas");
+			artMan4.setDescripcion("7 piezas de sushi variadas");
+			artMan4.setFechaAlta(new Date(1-10-2023));
+			artMan4.setFechaBaja(null);
+			artMan4.setFechaModificacion(null);
+			artMan4.setPrecioVenta(BigDecimal.valueOf(5000));
+			artMan4.setTiempoEstimadoCocina(25);
+			artMan4.setEstado(EstadoBasico.Alta);
+			artMan4.setUrlImagen("https://media.c5n.com/p/03172cea7d946db55d6ab28fa602cf0c/adjuntos/326/imagenes/000/199/0000199545/790x0/smart/kamay-lounge-sushi.jpg");
+			articuloManufacturadoRepository.save(artMan4);
+
+			ArticuloManufacturado artMan5 = new ArticuloManufacturado();
+			artMan5.setCosto(BigDecimal.valueOf(1500));
+			artMan5.setDenominacion("lomo de bife");
+			artMan5.setDescripcion("lomo de ternera con vegetales");
+			artMan5.setFechaAlta(new Date(1-10-2023));
+			artMan5.setFechaBaja(null);
+			artMan5.setFechaModificacion(null);
+			artMan5.setPrecioVenta(BigDecimal.valueOf(3500));
+			artMan5.setTiempoEstimadoCocina(25);
+			artMan5.setEstado(EstadoBasico.Alta);
+			artMan5.setUrlImagen("https://www.clarin.com/img/2021/07/26/u-aUfp64d_1256x620__1.jpg");
+			articuloManufacturadoRepository.save(artMan5);
+
+			ArticuloManufacturado artMan6 = new ArticuloManufacturado();
+			artMan6.setCosto(BigDecimal.valueOf(1500));
+			artMan6.setDenominacion("Fideos");
+			artMan6.setDescripcion("fideos con salsa a eleccion");
+			artMan6.setFechaAlta(new Date(1-10-2023));
+			artMan6.setFechaBaja(null);
+			artMan6.setFechaModificacion(null);
+			artMan6.setPrecioVenta(BigDecimal.valueOf(3500));
+			artMan6.setTiempoEstimadoCocina(25);
+			artMan6.setEstado(EstadoBasico.Alta);
+			artMan6.setUrlImagen("https://cocinaconmarco.com/wp-content/uploads/2022/02/Ant-web-Pasta-salsa-arrabbiata-e1645198880814.webp");
+			articuloManufacturadoRepository.save(artMan6);
 
 			Cliente cliente1 = new Cliente();
 			cliente1.setNombre("Hola :)");
