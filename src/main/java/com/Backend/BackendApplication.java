@@ -14,14 +14,16 @@ import org.springframework.context.annotation.Bean;
 import java.math.BigDecimal;
 import java.time.LocalTime;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
-import static com.Backend.enums.EstadoPedido.PAGADO;
+import static com.Backend.enums.EstadoPedido.*;
 import static com.Backend.enums.FormaPago.EFECTIVO;
 import static com.Backend.enums.TipoEnvio.DELIVERY;
 
 
 @SpringBootApplication
 public class BackendApplication {
+	private GregorianCalendar fecha = new GregorianCalendar();
 	@Autowired
 	 ClienteRepository clienteRepository;
 	@Autowired
@@ -302,6 +304,305 @@ public class BackendApplication {
 
 //			DetallePedido detped = new DetallePedido();
 //			detped.setCantidad(1);
+
+			Cliente cliente2 = new Cliente();
+			cliente2.setNombre("Fabrizio");
+			cliente2.setApellido("Azeglio");
+			cliente2.setEmail("fazeglio@hotmail.com");
+			cliente2.setFechaAlta(new Date(1-10-2023));
+			cliente2.setFechaBaja(null);
+			cliente2.setFechaModificacion(null);
+			cliente2.setTelefono("12345678");
+
+			Usuario user2 = new Usuario();
+			user2.setFechaAlta(new Date(1-10-2023));
+			user2.setFechaBaja(null);
+			user2.setFechaModificacion(null);
+			user2.setRol(Rol.CLIENTE);
+			user2.setUsername("fabros96");
+			user2.setPassword("123456");
+			user2.setActivo(true);
+			usuarioRepository.save(user2);
+
+			cliente2.setUsuario(user2);
+			clienteRepository.save(cliente2);
+
+			Domicilio domi2 = new Domicilio();
+			domi2.setCalle("Cacheuta 555");
+			domi2.setCodigoPostal(5539);
+			domi2.setFechaAlta(new Date(1-10-2023));
+			domi2.setFechaBaja(null);
+			domi2.setFechaModificacion(null);
+			domi2.setCliente(cliente2);
+			domi2.setCliente(cliente2);
+			domicilioRepository.save(domi2);
+
+			Cliente cliente3 = new Cliente();
+			cliente3.setNombre("Joaco");
+			cliente3.setApellido("Cortez");
+			cliente3.setEmail("jcortez@hotmail.com");
+			cliente3.setFechaAlta(new Date(1-10-2023));
+			cliente3.setFechaBaja(null);
+			cliente3.setFechaModificacion(null);
+			cliente3.setTelefono("12345679");
+
+			Usuario user3 = new Usuario();
+			user3.setFechaAlta(new Date(1-10-2023));
+			user3.setFechaBaja(null);
+			user3.setFechaModificacion(null);
+			user3.setRol(Rol.CLIENTE);
+			user3.setUsername("jcortez");
+			user3.setPassword("123789");
+			user3.setActivo(true);
+			usuarioRepository.save(user3);
+
+			cliente3.setUsuario(user3);
+			clienteRepository.save(cliente3);
+
+			Domicilio domi3 = new Domicilio();
+			domi3.setCalle("Calle Siu 777");
+			domi3.setCodigoPostal(5500);
+			domi3.setFechaAlta(new Date(1-10-2023));
+			domi3.setFechaBaja(null);
+			domi3.setFechaModificacion(null);
+			domi3.setCliente(cliente3);
+			domi3.setCliente(cliente3);
+			domicilioRepository.save(domi3);
+
+			Cliente cliente4 = new Cliente();
+			cliente4.setNombre("Ezequiel");
+			cliente4.setApellido("Buxo");
+			cliente4.setEmail("ebuxo@hotmail.com");
+			cliente4.setFechaAlta(new Date(1-10-2023));
+			cliente4.setFechaBaja(null);
+			cliente4.setFechaModificacion(null);
+			cliente4.setTelefono("12345676");
+
+			Usuario user4 = new Usuario();
+			user4.setFechaAlta(new Date(1-10-2023));
+			user4.setFechaBaja(null);
+			user4.setFechaModificacion(null);
+			user4.setRol(Rol.CLIENTE);
+			user4.setUsername("ebuxo");
+			user4.setPassword("123765");
+			user4.setActivo(true);
+			usuarioRepository.save(user4);
+
+			cliente4.setUsuario(user4);
+			clienteRepository.save(cliente4);
+
+			Domicilio domi4 = new Domicilio();
+			domi4.setCalle("Calle Falsa 123");
+			domi4.setCodigoPostal(5500);
+			domi4.setFechaAlta(new Date(1-10-2023));
+			domi4.setFechaBaja(null);
+			domi4.setFechaModificacion(null);
+			domi4.setCliente(cliente4);
+			domi4.setCliente(cliente4);
+			domicilioRepository.save(domi4);
+
+			Cliente cliente5 = new Cliente();
+			cliente5.setNombre("Antunella");
+			cliente5.setApellido("Cortez");
+			cliente5.setEmail("acortez@hotmail.com");
+			cliente5.setFechaAlta(new Date(1-10-2023));
+			cliente5.setFechaBaja(null);
+			cliente5.setFechaModificacion(null);
+			cliente5.setTelefono("26171235");
+
+			Usuario user5 = new Usuario();
+			user5.setFechaAlta(new Date(1-10-2023));
+			user5.setFechaBaja(null);
+			user5.setFechaModificacion(null);
+			user5.setRol(Rol.CLIENTE);
+			user5.setUsername("acortez");
+			user5.setPassword("lala");
+			user5.setActivo(true);
+			usuarioRepository.save(user5);
+
+			cliente5.setUsuario(user5);
+			clienteRepository.save(cliente5);
+
+			Domicilio domi5 = new Domicilio();
+			domi5.setCalle("Barrio Escondido");
+			domi5.setCodigoPostal(5540);
+			domi5.setFechaAlta(new Date(1-10-2023));
+			domi5.setFechaBaja(null);
+			domi5.setFechaModificacion(null);
+			domi5.setCliente(cliente5);
+			domi5.setCliente(cliente5);
+			domicilioRepository.save(domi5);
+
+			Cliente cliente6 = new Cliente();
+			cliente6.setNombre("El Nachin");
+			cliente6.setApellido("Arnold");
+			cliente6.setEmail("enarnold@hotmail.com");
+			cliente6.setFechaAlta(new Date(1-10-2023));
+			cliente6.setFechaBaja(null);
+			cliente6.setFechaModificacion(null);
+			cliente6.setTelefono("2604561234");
+
+			Usuario user6 = new Usuario();
+			user6.setFechaAlta(new Date(1-10-2023));
+			user6.setFechaBaja(null);
+			user6.setFechaModificacion(null);
+			user6.setRol(Rol.CLIENTE);
+			user6.setUsername("heyarnold");
+			user6.setPassword("eh?<gira>");
+			user6.setActivo(true);
+			usuarioRepository.save(user6);
+
+			cliente6.setUsuario(user6);
+			clienteRepository.save(cliente6);
+
+			Domicilio domi6 = new Domicilio();
+			domi6.setCalle("Al Lado del Vecino");
+			domi6.setCodigoPostal(5500);
+			domi6.setFechaAlta(new Date(1-10-2023));
+			domi6.setFechaBaja(null);
+			domi6.setFechaModificacion(null);
+			domi6.setCliente(cliente6);
+			domi6.setCliente(cliente6);
+			domicilioRepository.save(domi6);
+
+
+			//----------------------------------------------PEDIDOS EXTRAS PARA PRUEBAS DE FABRI
+
+			Pedido pedido2 = new Pedido();
+			pedido2.setCliente(cliente2);
+
+
+			pedido2.setDomicilio(domi2);
+			pedido2.setEstado(CANCELADO);
+			fecha.set(2023, 8, 10);
+			pedido2.setFechaPedido(fecha.getTime());
+			pedido2.setFormaPago(EFECTIVO);
+			pedido2.setHoraEstimadaFinalizacion(LocalTime.now());//ver
+			pedido2.setTipoEnvio(DELIVERY);
+			pedido2.setTotal(BigDecimal.valueOf(2500));
+			pedido2.setTotalCosto(BigDecimal.valueOf(1200));
+			pedidoRepository.save(pedido2);
+
+
+			Pedido pedido3 = new Pedido();
+			pedido3.setCliente(cliente3);
+
+			pedido3.setDomicilio(domi3);
+			pedido3.setEstado(PAGADO);
+			fecha.set(2023, 10, 22);
+			pedido3.setFechaPedido(fecha.getTime());
+			pedido3.setFormaPago(EFECTIVO);
+			pedido3.setHoraEstimadaFinalizacion(LocalTime.now());//ver
+			pedido3.setTipoEnvio(DELIVERY);
+			pedido3.setTotal(BigDecimal.valueOf(2500));
+			pedido3.setTotalCosto(BigDecimal.valueOf(1200));
+			pedidoRepository.save(pedido3);
+
+
+			Pedido pedido4 = new Pedido();
+			pedido4.setCliente(cliente2);
+
+			pedido4.setDomicilio(domi2);
+			pedido4.setEstado(COMPLETADO);
+			fecha.set(2023, 10 ,20);
+			pedido4.setFechaPedido(fecha.getTime());
+			pedido4.setFormaPago(EFECTIVO);
+			pedido4.setHoraEstimadaFinalizacion(LocalTime.now());//ver
+			pedido4.setTipoEnvio(DELIVERY);
+			pedido4.setTotal(BigDecimal.valueOf(2500));
+			pedido4.setTotalCosto(BigDecimal.valueOf(1200));
+			pedidoRepository.save(pedido4);
+
+
+			Pedido pedido5 = new Pedido();
+			pedido5.setCliente(cliente4);
+
+			pedido5.setDomicilio(domi4);
+			pedido5.setEstado(PAGADO);
+			fecha.set(2023, 11, 15);
+			pedido5.setFechaPedido(fecha.getTime());
+			pedido5.setFormaPago(EFECTIVO);
+			pedido5.setHoraEstimadaFinalizacion(LocalTime.now());//ver
+			pedido5.setTipoEnvio(DELIVERY);
+			pedido5.setTotal(BigDecimal.valueOf(2500));
+			pedido5.setTotalCosto(BigDecimal.valueOf(1200));
+			pedidoRepository.save(pedido5);
+
+
+			Pedido pedido6 = new Pedido();
+			pedido6.setCliente(cliente4);
+
+			pedido6.setDomicilio(domi4);
+			pedido6.setEstado(CANCELADO);
+			fecha.set(2023, 11, 8);
+			pedido6.setFechaPedido(fecha.getTime());
+			pedido6.setFormaPago(EFECTIVO);
+			pedido6.setHoraEstimadaFinalizacion(LocalTime.now());//ver
+			pedido6.setTipoEnvio(DELIVERY);
+			pedido6.setTotal(BigDecimal.valueOf(2500));
+			pedido6.setTotalCosto(BigDecimal.valueOf(1200));
+			pedidoRepository.save(pedido6);
+
+
+			Pedido pedido7 = new Pedido();
+			pedido7.setCliente(cliente5);
+
+			pedido7.setDomicilio(domi5);
+			pedido7.setEstado(CANCELADO);
+			fecha.set(2023, 11, 5);
+			pedido7.setFechaPedido(fecha.getTime());
+			pedido7.setFormaPago(EFECTIVO);
+			pedido7.setHoraEstimadaFinalizacion(LocalTime.now());//ver
+			pedido7.setTipoEnvio(DELIVERY);
+			pedido7.setTotal(BigDecimal.valueOf(2500));
+			pedido7.setTotalCosto(BigDecimal.valueOf(1200));
+			pedidoRepository.save(pedido7);
+
+
+			Pedido pedido8 = new Pedido();
+			pedido8.setCliente(cliente5);
+
+			pedido8.setDomicilio(domi5);
+			pedido8.setEstado(PAGADO);
+			fecha.set(2023, 11, 1);
+			pedido8.setFechaPedido(fecha.getTime());
+			pedido8.setFormaPago(EFECTIVO);
+			pedido8.setHoraEstimadaFinalizacion(LocalTime.now());//ver
+			pedido8.setTipoEnvio(DELIVERY);
+			pedido8.setTotal(BigDecimal.valueOf(2500));
+			pedido8.setTotalCosto(BigDecimal.valueOf(1200));
+			pedidoRepository.save(pedido8);
+
+
+			Pedido pedido9 = new Pedido();
+			pedido9.setCliente(cliente2);
+
+			pedido9.setDomicilio(domi2);
+			pedido9.setEstado(PAGADO);
+			fecha.set(2023, 10, 30);
+			pedido9.setFechaPedido(fecha.getTime());
+			pedido9.setFormaPago(EFECTIVO);
+			pedido9.setHoraEstimadaFinalizacion(LocalTime.now());//ver
+			pedido9.setTipoEnvio(DELIVERY);
+			pedido9.setTotal(BigDecimal.valueOf(2500));
+			pedido9.setTotalCosto(BigDecimal.valueOf(1200));
+			pedidoRepository.save(pedido9);
+
+
+			Pedido pedido10 = new Pedido();
+			pedido10.setCliente(cliente2);
+
+			pedido10.setDomicilio(domi2);
+			pedido10.setEstado(PAGADO);
+			fecha.set(2023, 11, 21);
+			pedido10.setFechaPedido(fecha.getTime());
+			pedido10.setFormaPago(EFECTIVO);
+			pedido10.setHoraEstimadaFinalizacion(LocalTime.now());//ver
+			pedido10.setTipoEnvio(DELIVERY);
+			pedido10.setTotal(BigDecimal.valueOf(2500));
+			pedido10.setTotalCosto(BigDecimal.valueOf(1200));
+			pedidoRepository.save(pedido10);
+
 
 		};
 	}
