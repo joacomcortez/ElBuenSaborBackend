@@ -45,7 +45,6 @@ public class SecurityConfig {
                                         .requestMatchers(new AntPathRequestMatcher("/api/v1/demoAdmin/**")).hasAuthority("ADMINISTRADOR")
                                         .requestMatchers(new AntPathRequestMatcher("/api/v1/demoUser/**")).hasAuthority("CLIENTE")
                                         .requestMatchers(new AntPathRequestMatcher("/api/v1/**")).permitAll()
-                                        .requestMatchers(new AntPathRequestMatcher("/api/v1/**")).permitAll()
 
 
                 )

@@ -32,7 +32,7 @@ public class ArticuloManufacturado extends BaseFecha {
     @Column(length = 1000)
     private String descripcion;
 
-    @NotNull
+
     @Column(name = "tiempo_estimado_cocina")
     private Integer tiempoEstimadoCocina;
 
